@@ -1,3 +1,6 @@
+
+from django.template import loader
+from django.http import HttpResponse
 from django.shortcuts import render
 
 from .forms import SignInForm
@@ -5,5 +8,7 @@ from .forms import SignInForm
 # Create your views here.
 def mywow(request):
     if request.method == 'GET':
-#        form = Sign_In_Form(request)
-        return render(request, 'mywow.html')#, {'form': form})
+        form = SignInForm()
+        template = loader.get_template('mywow.html')
+        context = {'SignIn': form}
+        return HttpResponse(template.render(context, request))

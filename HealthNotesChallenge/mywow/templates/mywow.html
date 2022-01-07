@@ -14,3 +14,8 @@
     especially focusing on clinical trials being evaluated by the FDA.
 
 </h4>
+<form action="/your-name/" method="get">
+    {% csrf_token %}
+    {{ SignIn }}
+    <input type="submit" value="Submit">
+</form>
