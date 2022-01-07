@@ -3,8 +3,7 @@
 # Names of Group Members and Their Git Hub Usernames:
 #
 # Daniel Jiannetto, Username: aeshtetetwo
-# Wendy Hectman, Username:               
-# Cassandra Owens, Username:             
+# Daniel Lee, Username: daniel - aws                          
 #
 # How to Create and Run a Virtual Environment using venv:
 #
@@ -13,4 +12,5 @@
 # Screenshots of App:
 # 
 # How to Run the Django App:
+#
 #
