@@ -12,3 +12,6 @@ def mywow(request):
         template = loader.get_template('mywow.html')
         context = {'SignIn': form}
         return HttpResponse(template.render(context, request))
+
+def page1(request):
+    return HttpResponse("Hello, World!")
