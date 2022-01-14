@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from mywow.views import mywow
+from mywow.views import mywow, page1
+from django.conf.urls import url, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # mywow/
     path('', mywow, name='mywow'),
+    url(r'^page1/$', page1, name='page1'),
 ]
