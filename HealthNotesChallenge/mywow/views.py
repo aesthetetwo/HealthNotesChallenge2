@@ -14,4 +14,7 @@ def mywow(request):
         return HttpResponse(template.render(context, request))
 
 def page1(request):
-    return HttpResponse("Hello, World!")
+    return HttpResponse("page1")
+
+
+
