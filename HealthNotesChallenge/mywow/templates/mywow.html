@@ -15,9 +15,15 @@
     practitioners, regarding medical conditons and their treatments,
     especially focusing on clinical trials being evaluated by the FDA.
 
+<h2>Practioner Sign-In Below:</h2>
+
 </h4>
 <form action="/your-name/" method="get">
     {% csrf_token %}
     {{ SignIn }}
     <input type="submit" value="Submit">
 </form>
+
+<p>{% filter force_escape|lower %}
+    This text will be HTML-escaped, and will appear in all lowercase.
+{% endfilter %}</p>
