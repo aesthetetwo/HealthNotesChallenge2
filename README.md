@@ -16,19 +16,19 @@
 #          python3 -m venv django-env
 #
 #
-# 2. Run Virtual Environment
+#     2. Run Virtual Environment
 #
-#     In Windows:
+#          In Windows:
 #
-#          django-env\Scripts\activate.bat
+#               django-env\Scripts\activate.bat
 #
-#     In Mac or Unix:
+#          In Mac or Unix:
 #
-#          source django-env/bin/activate
+#               source django-env/bin/activate
 #
-#     In Windows Running Bash in Terminal on My PC:
+#          In Windows Running Bash in Terminal on My PC:
 #
-#          source django-env/Scripts/activate
+#               source django-env/Scripts/activate
 #
 #
 # How to Install Project Dependencies with pip:
