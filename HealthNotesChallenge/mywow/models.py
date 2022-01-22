@@ -1,6 +1,12 @@
 from django.db import models
 
+
+# Django is based on MVT (Model View Template) architecture.
+# Models are a key component of this architecture.
+# Models are class based.
+#
 # Create your models here.
+
 
 class Practitioner(models.Model):
     first_name = models.CharField(max_length=255)
