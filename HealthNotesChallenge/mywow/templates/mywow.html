@@ -1,23 +1,29 @@
-<h1>Health Notes Challenge - Home</h1>
+<h1>HEALTH NOTES CHALLENGE - HOME</h1>
 
-<p><a href='{% url "page1" %}'>link</a></p>
 
-<h2>Practioner</h2>
 
-<h2>Condition</h2>
+<h2>Practitioner</h2>
 
-<h2>Treatment</h2>
+<p><a href='{% url "page1" %}'>Practitioner</a></p>
 
-<h4>Dislcaimer: This website is for informational purposes only.
+<h2>Conditions</h2>
+
+<p><a href='{% url "page1" %}'>Conditions</a></p>
+
+<h2>Treatments</h2>
+
+<p><a href='{% url "page1" %}'>Treatments</a></p>
+
+<h4>Disclaimer: This website is for informational purposes only.
     In no way, shape or form should this website or it's creators
-    be considered to be practicing medicine or provising medical
+    be considered to be practicing medicine or providing medical
     advise. The goal of this website is to foster dialogue between
-    practitioners, regarding medical conditons and their treatments,
+    practitioners, regarding medical conditions and their treatments,
     especially focusing on clinical trials being evaluated by the FDA.
-
-<h2>Practioner Sign-In Below:</h2>
-
 </h4>
+
+<h2>Practitioner Sign-In Below:</h2>
+
 <form action="" method="GET">
     {% csrf_token %}
     {{ SignIn }}
