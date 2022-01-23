@@ -1,0 +1,12 @@
+<div class="main">
+    {% for data in dataset %}.
+    {{ data.medical }}<br/>
+    {{ data.surgical }}<br/>
+    {{ data.radiation }}<br/>
+    {{ data.chemotherapy }}<br/>
+    {{ data.other_alternative }}<br/>
+    {{ data.palliative }}<br/>
+    {{ data.clinical_trials }}<br/>
+    <hr/>
+    {% endfor %}
+</div>

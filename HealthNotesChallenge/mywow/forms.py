@@ -22,3 +22,14 @@ class SignInForm(forms.ModelForm):
     #degree = forms.CharField(max_length=255)
     #email = forms.CharField(max_length=255) 
     #phone = forms.CharField(max_length=255)
+
+class SignInForm(forms.ModelForm):
+  class Meta:
+    model = Conditions
+    fields = '__all__'
+    
+class SignInForm(forms.ModelForm):
+  class Meta:
+    model = Treatments
+    fields = '__all__'  
+
