@@ -20,13 +20,13 @@ class Conditions(models.Model):
     name_condition = models.CharField(max_length=255)
       
 class Treatments(models.Model):
-    medical = models.BooleanField()
-    surgical = models.BooleanField()
-    radiation = models.BooleanField()
-    chemotherapy = models.BooleanField()
+    medical = models.CharField(max_length=255)
+    surgical = models.CharField(max_length=255)
+    radiation = models.CharField(max_length=255)
+    chemotherapy = models.CharField(max_length=255)
     other_alternative = models.CharField(max_length=255)
     palliative = models.CharField(max_length=255)
-    clinical_trials = models.BooleanField()
+    clinical_trials = models.CharField(max_length=255)
 
 class Tag(models.Model):
     tag_id = models.AutoField(primary_key=True)
