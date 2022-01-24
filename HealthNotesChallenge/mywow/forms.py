@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import widgets
-from .models import Tag
+#from .models import Tag
 from .models import *
 
 class EditorForm(forms.Form):
@@ -23,12 +23,12 @@ class SignInForm(forms.ModelForm):
     #email = forms.CharField(max_length=255) 
     #phone = forms.CharField(max_length=255)
 
-class SignInForm(forms.ModelForm):
+class ConditionsForm(forms.ModelForm):
   class Meta:
     model = Conditions
     fields = '__all__'
     
-class SignInForm(forms.ModelForm):
+class TreatmentsForm(forms.ModelForm):
   class Meta:
     model = Treatments
     fields = '__all__'  
