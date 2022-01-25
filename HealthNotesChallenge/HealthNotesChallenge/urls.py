@@ -23,9 +23,15 @@ urlpatterns = [
     
     # mywow/
     path('', mywow, name='mywow'),
+    
+    # portal/
     path('portal/', portal, name='portal'),
-    url(r'^page1/$', page1, name='page1'),
     url(r'^portal/$', portal, name='portal'),
+    
+    url(r'^postportal/$', postportal, name='postportal'),
+    
+    # practitioners/
+    url(r'^page1/$', page1, name='page1'),
     
     # conditions/
   
@@ -35,4 +41,6 @@ urlpatterns = [
     
     url(r'^treatments/$', treatments, name='treatments'),
 
+    # posts/
+    url(r'^posts/$', posts, name='posts'),
 ]

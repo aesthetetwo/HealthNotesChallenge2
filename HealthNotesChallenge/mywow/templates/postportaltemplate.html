@@ -8,11 +8,6 @@
 
 <h1>Conditions</h1>
 <p>Conditions: {{ request.session.ConditionsPost.name_condition }}</p>
-<form action="" method="POST">
-    {% csrf_token %}
-    {{ Conditions }}
-    <input type="submit" value="Submit">
-</form>
 
 <h1>Treatments</h1>
 <p>Medical: {{ request.session.TreatmentsPost.medical }}</p>
@@ -22,17 +17,9 @@
 <p>Other Alternative: {{ request.session.TreatmentsPost.other_alternative }}</p>
 <p>Palliative: {{ request.session.TreatmentsPost.palliative }}</p>
 <p>Clinical Trials: {{ request.session.TreatmentsPost.clinical_trials }}</p>
-<form action="" method="POST">
-    {% csrf_token %}
-    {{ Treatments }}
-    <input type="submit" value="Submit">
-</form>
 
 <a href='/'><button>Re-Enter Credentials</button></a>
 
 <h1>Post</h1>
-<form action="" method="POST">
-    {% csrf_token %}
-    {{ Post }}
-    <input type="submit" value="Submit">
-</form>
+<p>Post Title: {{ request.session.PostsPost.title }}</p>
+<p>Post Body: {{ request.session.PostsPost.body }}</p>

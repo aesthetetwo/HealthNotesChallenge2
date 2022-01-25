@@ -3,14 +3,10 @@ from django.forms import widgets
 #from .models import Tag
 from .models import *
 
-class EditorForm(forms.Form):
-    title = forms.CharField(max_length=255, required=True)
-    img_link = forms.URLField(required=True)
-    body = forms.CharField(widget=forms.Textarea, required=True)
-    choices = []
-    for tag in Tag.objects.all():
-        choices.append((tag.tag_id, tag.name))
-    tags = forms.MultipleChoiceField(widget=forms.CheckboxSelectMultiple, choices=choices, required=True)
+class MakePostForm(forms.ModelForm):
+  class Meta:
+    model = Posts
+    fields = '__all__'
     
 class SignInForm(forms.ModelForm):
   class Meta:
