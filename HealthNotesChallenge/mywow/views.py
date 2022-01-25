@@ -19,7 +19,7 @@ def mywow(request):
         if form.is_valid():
             post=request.POST
             form.save()
-            return redirect('page1') 
+            return redirect('portal') 
         template = loader.get_template('mywow.html')
         context = {'SignIn': form}
         return HttpResponse(template.render(context, request))
@@ -37,7 +37,7 @@ def portal(request):
             treatmentsform.save()
             return redirect('portal') 
         
-        template = loader.get_template('portal.html')
+        template = loader.get_template('portaltemplate.html')
         context = {'Conditions': conditionsform, 'Treatments': treatmentsform}
         return HttpResponse(template.render(context, request))
 

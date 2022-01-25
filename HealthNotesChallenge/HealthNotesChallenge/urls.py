@@ -25,7 +25,8 @@ urlpatterns = [
     path('', mywow, name='mywow'),
     path('portal/', portal, name='portal'),
     url(r'^page1/$', page1, name='page1'),
-
+    url(r'^portal/$', portal, name='portal'),
+    
     # conditions/
   
     url(r'^conditions/$', conditions, name='conditions'),
