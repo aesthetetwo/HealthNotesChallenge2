@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from mywow.views import mywow, page1, conditions, treatments
+from mywow.views import *
 from django.conf.urls import url #include
 
 urlpatterns = [
@@ -23,14 +23,15 @@ urlpatterns = [
     
     # mywow/
     path('', mywow, name='mywow'),
+    path('portal/', portal, name='portal'),
     url(r'^page1/$', page1, name='page1'),
 
     # conditions/
-    path('', mywow, name='mywow'),
+  
     url(r'^conditions/$', conditions, name='conditions'),
 
     # treaments/
-    path('', mywow, name='mywow'),
+    
     url(r'^treatments/$', treatments, name='treatments'),
 
 ]
