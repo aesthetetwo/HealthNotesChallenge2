@@ -43,4 +43,8 @@ urlpatterns = [
 
     # posts/
     url(r'^posts/$', posts, name='posts'),
+    
+    
+    url(r'^delete/(?P<part_id>[0-9]+)/$', deletepost, name='delete_view'),
+    url(r'^update/(?P<part_id>[0-9]+)/$', updatepost, name='update_view'),
 ]

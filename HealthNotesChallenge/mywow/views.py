@@ -88,3 +88,39 @@ def posts(request):
     # add the dictionary during initialization
     context["dataset"] = Posts.objects.all()
     return render(request, "poststemplate.html", context)
+    
+def deletepost(request,part_id =None):
+    context = {}
+    object = Posts.objects.get(post_id=part_id)
+    object.delete()
+    return redirect('posts') 
+    #return render(request, "poststemplate.html", context)
+    
+def updatepost(request,part_id =None):
+    if request.method == 'GET' or request.method == 'POST':
+    
+        if part_id:
+            obj_to_edit = Posts.objects.get(post_id=part_id)
+            form = MakePostForm(instance=obj_to_edit)
+        else:
+            obj_to_edit = None
+            form = MakePostForm()
+            
+        if id: #update
+            form = MakePostForm(request.POST, instance=obj_to_edit)
+        else: #create
+            form = MakePostForm(request.POST)
+
+        if form.is_valid():
+            request.session['PostsPost'] = request.POST
+            #object = Posts.objects.get(post_id=part_id)
+            #object.delete()
+            form.save()
+            return redirect('posts') 
+        template = loader.get_template('changeposttemplate.html')
+        context = {'Post': form}
+        return HttpResponse(template.render(context, request))
+
+
+
+
