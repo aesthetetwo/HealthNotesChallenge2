@@ -8,11 +8,11 @@ from .models import *
 
 # Django is based on MVT (Model View Template) architecture.
 # Views are a key component of this architecture.
-# Views are function based.
+# Views are function based in this case.
 #
 # Create your views here.
 
-
+# Function with Logic for Home Page
 def mywow(request):
     if request.method == 'GET' or request.method == 'POST':
         form = SignInForm(request.POST)
@@ -25,6 +25,7 @@ def mywow(request):
         context = {'SignIn': form}
         return HttpResponse(template.render(context, request))
 
+# Function with Logic for Portal Page
 def portal(request):
     if request.method == 'GET' or request.method == 'POST':
         conditionsform = ConditionsForm(request.POST)
@@ -47,12 +48,14 @@ def portal(request):
         context = {'Conditions': conditionsform, 'Treatments': treatmentsform, 'Post': makepostform}
         return HttpResponse(template.render(context, request))
 
+# Function for After Portal Page
 def postportal(request):
     if request.method == 'GET':
         context = {}
         template = loader.get_template('postportaltemplate.html')
         return HttpResponse(template.render(context, request))
 
+# Function for Practitioner Page
 def page1(request):
     # return HttpResponse("page1")
     # dictionary for initial data with
@@ -62,6 +65,7 @@ def page1(request):
     context["dataset"] = Practitioner.objects.all()
     return render(request, "page1template.html", context)
 
+# Function for Conditions Page
 def conditions(request):
     # return HttpResponse("conditions")
     # dictionary for initial data with
@@ -71,6 +75,7 @@ def conditions(request):
     context["dataset"] = Conditions.objects.all()
     return render(request, "conditionstemplate.html", context)
 
+# Function for Treatments Page
 def treatments(request):
     # return HttpResponse("treatments")
     # dictionary for initial data with
@@ -80,6 +85,7 @@ def treatments(request):
     context["dataset"] = Treatments.objects.all()
     return render(request, "treatmentstemplate.html", context)
 
+# Function Allowing Posts
 def posts(request):
     # return HttpResponse("treatments")
     # dictionary for initial data with
@@ -88,14 +94,16 @@ def posts(request):
     # add the dictionary during initialization
     context["dataset"] = Posts.objects.all()
     return render(request, "poststemplate.html", context)
-    
+
+# Function Allowing Deletions Posts to enable full CRUD    
 def deletepost(request,part_id =None):
     context = {}
     object = Posts.objects.get(post_id=part_id)
     object.delete()
     return redirect('posts') 
     #return render(request, "poststemplate.html", context)
-    
+
+# Function with Logic Allowing Update of Posts to enable full CRUD  
 def updatepost(request,part_id =None):
     if request.method == 'GET' or request.method == 'POST':
     
