@@ -1,0 +1,10 @@
+<div class="main">
+    {% for data in dataset %}.
+    {{ data.post_id }}<br/>
+    {{ data.title }}<br/>
+    {{ data.body }}<br/>
+    <hr/>
+	<a href="{% url 'update_view' part_id=data.post_id %}"><i class="Update"><p>Update</p></i></a>
+	<a href="{% url 'delete_view' part_id=data.post_id %}"><i class="Delete"><p>Delete</p></i></a>
+    {% endfor %}
+</div>

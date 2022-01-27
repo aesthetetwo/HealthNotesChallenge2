@@ -23,9 +23,16 @@ urlpatterns = [
     
     # mywow/
     path('', mywow, name='mywow'),
+    
+    # portal/
     path('portal/', portal, name='portal'),
+    url(r'^portal/$', portal, name='portal'),
+    
+    url(r'^postportal/$', postportal, name='postportal'),
+    
+    # practitioners/
     url(r'^page1/$', page1, name='page1'),
-
+    
     # conditions/
   
     url(r'^conditions/$', conditions, name='conditions'),
@@ -34,4 +41,10 @@ urlpatterns = [
     
     url(r'^treatments/$', treatments, name='treatments'),
 
+    # posts/
+    url(r'^posts/$', posts, name='posts'),
+    
+    
+    url(r'^delete/(?P<part_id>[0-9]+)/$', deletepost, name='delete_view'),
+    url(r'^update/(?P<part_id>[0-9]+)/$', updatepost, name='update_view'),
 ]
