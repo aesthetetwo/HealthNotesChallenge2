@@ -1,54 +1,63 @@
-# Name of Project: HealthNotesChallenge
+# **Name of Project: _HealthNotesChallenge_**
 #
 #
-# Names of Group Members and Their Git Hub Usernames:
 #
-#     Daniel Jiannetto, Username: aesthetetwo
-#                          
+# **Names of Group Members and Their Git Hub Usernames:**
 #
-# How to Create and Run a Virtual Environment using venv:
-#
-#     1. Create Virtual Environment
-#
-#          mkdir django-projects
-#          cd django-projects
-#
-#          python3 -m venv django-env
+##     _Daniel Jiannetto, Username: aesthetetwo_
+#                         
+###     Both Yusuf Bolden, My Pod TA &
+###          Daniel Lee, My Mentor
+###     Advised Me; However, Were Not Group Members
 #
 #
-#     2. Run Virtual Environment
 #
-#          In Windows:
+# **How to Create and Run a Virtual Environment using venv**:
 #
-#               django-env\Scripts\activate.bat
+##     1. Create Virtual Environment
 #
-#          In Mac or Unix:
+###          - mkdir django-projects
+###          - cd django-projects
 #
-#               source django-env/bin/activate
-#
-#          In Windows Running Bash in Terminal on My PC:
-#
-#               source django-env/Scripts/activate
+###          - python3 -m venv django-env
 #
 #
-# How to Install Project Dependencies with pip:
+##     2. Run Virtual Environment
 #
-#     1. pip install django
+###          In Windows:
 #
-#     2. pip freeze > requirements.txt
+####               - django-env\Scripts\activate.bat
+#
+###          In Mac or Unix:
+#
+####               - source django-env/bin/activate
+#
+###          In Windows Running Bash in Terminal on My PC:
+#
+####               - source django-env/Scripts/activate
 #
 #
-# Screenshots of App:
+# **How to Install Project Dependencies with pip:**
+#
+##     1. pip install django
+#
+##     2. pip freeze > requirements.txt
+#
+#
+#
+# **Screenshots of App:**
 # 
 #
 #
+# **How to Run the Django App:**
 #
-# How to Run the Django App:
+##     python manage.py runserver
 #
-#     python manage.py runserver
+##     In Browser URL Window Type http://127.0.0.1:8000/
 #
-#     In Browser URL Window Type http://127.0.0.1:8000/
+# **Enjoy!**
 #
-# Enjoy!
+# **THE PRECEEDING README.md WAS WRITTEN USING MARKDOWN**
+#
 #
 #
