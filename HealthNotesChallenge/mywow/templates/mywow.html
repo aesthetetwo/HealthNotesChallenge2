@@ -1,43 +1,46 @@
-<body style="background-color: aquamarine;"></body>
+<!DOCTYPE html>
+<html>
 
-<h1>HEALTH NOTES CHALLENGE - HOME</h1>
+<body style="background-color: aquamarine;">
 
-<h4>Welcome to my homepage! Health Notes Challenge is a public
+<h1>HEALTH NOTES - HOME</h1>
+
+<h4><p>Welcome to my homepage! Health Notes is a public
     forum targeting healthcare practitioners and providers of
     all levels of education and experience, encouraging free exchange
     of ideas using a post format, regarding a broad spectrum of 
-    conditions and treatments affecting individuals.
+    conditions and treatments affecting individuals.</p>
 
-    To utilize the site, first go to the sign in form at the bottom
+    <p>To utilize the site, first go to the sign in form at the bottom
     of this page and complete the required fields and submit to gain
-    access to the portal page.
+    access to the portal page.</p>
     
-    From the portal page, choice from the options Practitioner, 
+    <p>From the portal page, choose from the options Practitioner, 
     Conditions, Treatments and Post. As an example, go to Post and
-    complete the required fields, adding what you like and submit.
+    complete the required fields, adding what you like and submit.</p>
 
-    After submitting, click on re-submit credentials and this will
+    <p>After submitting, click on re-submit credentials and this will
     take you back to the homepage. From here you can go to the Posts
     link and click, it will take you to your most recent post, which 
-    you can update or delete.
+    you can update or delete.</p>
 
-    We hope you find the information on the site useful!
+    <p>We hope you find the information on the site informative and useful!</p>
     
 </h4>
 
-<h2>Practitioner DB entries</h2>
+<h2>Practitioner entries:</h2>
 
 <p><a href='{% url "page1" %}'>Practitioners</a></p>
 
-<h2>Conditions DB entries</h2>
+<h2>Conditions entries:</h2>
 
 <p><a href='{% url "conditions" %}'>Conditions</a></p>
 
-<h2>Treatments DB entries</h2>
+<h2>Treatments entries:</h2>
 
 <p><a href='{% url "treatments" %}'>Treatments</a></p>
 
-<h2>Posts DB entries</h2>
+<h2>Posts entries:</h2>
 
 <p><a href='{% url "posts" %}'>Posts</a></p>
 
@@ -52,10 +55,14 @@
 
 <form action="" method="POST">
     {% csrf_token %}
-    {{ SignIn }}
+    {{ SignIn.as_p }}
     <input type="submit" value="Submit">
 </form>
 
 <p>{% filter force_escape|lower %}
     This text will be HTML-escaped, and will appear in all lowercase.
 {% endfilter %}</p>
+
+</body>
+
+</html>
