@@ -4,6 +4,8 @@
 
 <body style="background-color: palevioletred;">
 
+<h1>Posts</h1>
+
     <div class="main">
     {% for data in dataset %}.
     {{ data.post_id }}<br/>
@@ -14,6 +16,8 @@
 	<a href="{% url 'delete_view' part_id=data.post_id %}"><i class="Delete"><p>Delete</p></i></a>
     {% endfor %}
 </div>
+
+<a href='/'><button>Return Home</button></a>
 
 </body>
 
