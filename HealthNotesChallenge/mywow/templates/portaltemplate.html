@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+
+<html>
+
+<body style="background-color: rgba(255, 255, 0, 0.774);">
+
+
 <h1>Practitioner Info:</h1>
 <p>First Name: {{ request.session.practitioner.first_name }}</p>
 <p>Last Name: {{ request.session.practitioner.last_name }}</p>
@@ -10,7 +17,7 @@
 <p>Conditions: {{ request.session.ConditionsPost.name_condition }}</p>
 <form action="" method="POST">
     {% csrf_token %}
-    {{ Conditions }}
+    {{ Conditions.as_p }}
     <input type="submit" value="Submit">
 </form>
 
@@ -22,17 +29,22 @@
 <p>Other Alternative: {{ request.session.TreatmentsPost.other_alternative }}</p>
 <p>Palliative: {{ request.session.TreatmentsPost.palliative }}</p>
 <p>Clinical Trials: {{ request.session.TreatmentsPost.clinical_trials }}</p>
+
 <form action="" method="POST">
     {% csrf_token %}
-    {{ Treatments }}
+    {{ Treatments.as_p }}
     <input type="submit" value="Submit">
 </form>
 
-<a href='/'><button>Re-Enter Credentials</button></a>
+<a href='/'><button>Re-Enter Credentials/Return Home</button></a>
 
 <h1>Post</h1>
 <form action="" method="POST">
     {% csrf_token %}
-    {{ Post }}
+    {{ Post.as_p }}
     <input type="submit" value="Submit">
 </form>
+
+</body>
+
+</html>
