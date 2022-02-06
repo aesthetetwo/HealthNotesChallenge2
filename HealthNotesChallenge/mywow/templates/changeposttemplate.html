@@ -1,14 +1,24 @@
 <!DOCTYPE html>
-<html>
 
-<body style="background-color: pink;"(218, 28, 224);">
+<html lang="en-US">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body style="background-color: pink;"(218, 28, 224);>
 
 
 <h1>Post</h1>
+
 <form action="" method="POST">
     {% csrf_token %}
     {{ Post }}
     <input type="submit" value="Submit">
 </form>
+
 </body>
+
 </html>

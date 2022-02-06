@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en-US">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
 
 <body style="background-color: rgba(255, 255, 0, 0.678);">
 
 <h1>Practitioner Info:</h1>
+
 <p>First Name: {{ request.session.practitioner.first_name }}</p>
 <p>Last Name: {{ request.session.practitioner.last_name }}</p>
 <p>Occupation: {{ request.session.practitioner.occupation }}</p>
@@ -13,9 +20,11 @@
 <p>Phone: {{ request.session.practitioner.phone }}</p>
 
 <h1>Conditions</h1>
+
 <p>Conditions: {{ request.session.ConditionsPost.name_condition }}</p>
 
 <h1>Treatments</h1>
+
 <p>Medical: {{ request.session.TreatmentsPost.medical }}</p>
 <p>Surgical: {{ request.session.TreatmentsPost.surgical }}</p>
 <p>Radiation: {{ request.session.TreatmentsPost.radiation }}</p>
@@ -27,6 +36,7 @@
 
 
 <h1>Post</h1>
+
 <p>Post Title: {{ request.session.PostsPost.title }}</p>
 <p>Post Body: {{ request.session.PostsPost.body }}</p>
 

@@ -1,72 +1,88 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en-US">
+
+<head>
+    <title>HEALTH NOTES</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        h4 {
+            color: red;
+        }
+    </style>
+
+</head>
 
 <body style="background-color: aquamarine;">
 
-<h1>HEALTH NOTES - HOME</h1>
+    <h1>HEALTH NOTES - HOME</h1>
 
-<h4>
-    <p>Welcome to my homepage! Health Notes is a public
-    forum targeting healthcare practitioners and providers of
-    all levels of education and experience, encouraging free exchange
-    of ideas using a post format, regarding a broad spectrum of 
-    conditions and treatments affecting individuals.</p>
+    <h3>
+        <p>Welcome to my homepage! Health Notes is a public
+            forum targeting healthcare practitioners and providers of
+            all levels of education and experience, encouraging free exchange
+            of ideas using a post format, regarding a broad spectrum of
+            conditions and treatments affecting individuals.</p>
 
-    <p>To utilize the site, first go to the Practitioner Sign-In form 
-    below on this page and complete the required fields then submit to 
-    gain access to the portal page.</p>
-    
-    <p>From the portal page, choose from the options Practitioner, 
-    Conditions, Treatments and Post. As an example, go to Post and
-    complete the required fields, adding what you like and submit.</p>
+        <p>TO UTILIZE THE SITE, FIRST GO TO THE PRACTITIONER SIGN-IN FORM
+            BELOW ON THIS PAGE AND COMPLETE THE REQUIRED FIELDS THEN SUBMIT TO
+            GAIN ACCESS TO THE PORTAL PAGE.</p>
 
-    <p>After submitting, click on Re-Enter Credentials/Return Home 
-    and this will take you back to the homepage. From here you can go 
-    to the Posts link and click, it will take you to your most recent post, and a 
-    list of all prior posts in chronological order, 
-    which you can update or delete.</p>
+        <p>FROM THE PORTAL PAGE, AS AN EXAMPLE, GO TO POSTS AND
+            COMPLETE THE REQUIRED FIELDS, ADDING WHAT YOU LIKE, AND SUBMIT.</p>
 
-    <p>I hope you find the information on the site informative, useful
-    and perhaps even life saving.</p>
-    
-</h4>
+        <p>After submitting, click on Re-Enter Credentials/Return Home
+            and this will take you back to the homepage. From here you can go
+            to the Posts link and click, it will take you to your most recent post, and a
+            list of all prior posts in chronological order,
+            which you can update or delete. The other options function similarly.</p>
 
-<h2>Practitioner Sign-In Below:</h2>
+        <p>I hope you find the information on the site informative, useful
+            and perhaps even life saving.</p>
 
-<form action="" method="POST">
-    {% csrf_token %}
-    {{ SignIn.as_p }}
-    <input type="submit" value="Submit">
-</form>
+    </h3>
 
-<h2>Practitioner entries:</h2>
+    <h2>Practitioner Sign-In Below: (Allows Access to Portal Page and Site Utilization)</h2>
 
-<p><a href='{% url "page1" %}'>Practitioners</a></p>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ SignIn.as_p }}
+        <input type="submit" value="Submit">
+    </form>
 
-<h2>Conditions entries:</h2>
+    <h2>Practitioner entries:</h2>
 
-<p><a href='{% url "conditions" %}'>Conditions</a></p>
+    <p><a href='{% url "page1" %}'>Practitioners</a></p>
 
-<h2>Treatments entries:</h2>
+    <h2>Conditions entries:</h2>
 
-<p><a href='{% url "treatments" %}'>Treatments</a></p>
+    <p><a href='{% url "conditions" %}'>Conditions</a></p>
 
-<h2>Posts entries:</h2>
+    <h2>Treatments entries:</h2>
 
-<p><a href='{% url "posts" %}'>Posts</a></p>
+    <p><a href='{% url "treatments" %}'>Treatments</a></p>
 
-<h4>Disclaimer: This website is for informational purposes only.
-    In no way, shape or form should this website or it's creators
-    be considered to be practicing medicine or providing medical
-    advise. The goal of this website is to foster dialogue between
-    practitioners, regarding medical conditions and their treatments,
-    especially focusing on clinical trials being evaluated by the FDA.
+    <h2>Posts entries:</h2>
+
+    <p><a href='{% url "posts" %}'>Posts</a></p>
 
 
+    <h4>
+        Disclaimer: This website is for informational purposes only.
+        In no way, shape or form should this website or it's creators
+        be considered to be practicing medicine or providing medical
+        advise. The goal of this website is to foster dialogue between
+        practitioners, regarding medical conditions and their treatments,
+        especially focusing on clinical trials being evaluated by the FDA.
+        This website content is not peer reviewed.
+    </h4>
 
-<p>{% filter force_escape|lower %}
-    This text will be HTML-escaped, and will appear in all lowercase.
-{% endfilter %}</p>
+
+    <p>{% filter force_escape|lower %}
+        This text will be HTML-escaped, and will appear in all lowercase.
+        {% endfilter %}</p>
 
 </body>
 
