@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en-US">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
 
 <body style="background-color: rgba(255, 255, 0, 0.774);">
 
 <h1>PORTAL</h1>    
 
-<h1>Practitioner Info:</h1>
+<h1>Practitioners Info:</h1>
+
 <p>First Name: {{ request.session.practitioner.first_name }}</p>
 <p>Last Name: {{ request.session.practitioner.last_name }}</p>
 <p>Occupation: {{ request.session.practitioner.occupation }}</p>
@@ -15,7 +22,9 @@
 <p>Phone: {{ request.session.practitioner.phone }}</p>
 
 <h1>Conditions</h1>
+
 <p>Conditions: {{ request.session.ConditionsPost.name_condition }}</p>
+
 <form action="" method="POST">
     {% csrf_token %}
     {{ Conditions.as_p }}
@@ -23,6 +32,7 @@
 </form>
 
 <h1>Treatments</h1>
+
 <p>Medical: {{ request.session.TreatmentsPost.medical }}</p>
 <p>Surgical: {{ request.session.TreatmentsPost.surgical }}</p>
 <p>Radiation: {{ request.session.TreatmentsPost.radiation }}</p>
@@ -38,8 +48,8 @@
 </form>
 
 
+<h1>Posts</h1>
 
-<h1>Post</h1>
 <form action="" method="POST">
     {% csrf_token %}
     {{ Post.as_p }}
