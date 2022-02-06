@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
+
+<head>
+    <title>HEALTH NOTES</title>
+
+    <style> 
+           h4 {color:red;}   
+    </style>
+
+</head>
+
 
 <body style="background-color: aquamarine;">
 
 <h1>HEALTH NOTES - HOME</h1>
 
-<h4>
+<h3>
     <p>Welcome to my homepage! Health Notes is a public
     forum targeting healthcare practitioners and providers of
     all levels of education and experience, encouraging free exchange
@@ -29,7 +39,7 @@
     <p>I hope you find the information on the site informative, useful
     and perhaps even life saving.</p>
     
-</h4>
+</h3>
 
 <h2>Practitioner Sign-In Below:</h2>
 
@@ -55,13 +65,16 @@
 
 <p><a href='{% url "posts" %}'>Posts</a></p>
 
-<h4>Disclaimer: This website is for informational purposes only.
+
+<h4>
+    Disclaimer: This website is for informational purposes only.
     In no way, shape or form should this website or it's creators
     be considered to be practicing medicine or providing medical
     advise. The goal of this website is to foster dialogue between
     practitioners, regarding medical conditions and their treatments,
     especially focusing on clinical trials being evaluated by the FDA.
-
+    This website content is not peer reviewed.
+</h4>
 
 
 <p>{% filter force_escape|lower %}
