@@ -37,6 +37,8 @@ urlpatterns = [
   
     url(r'^conditions/$', conditions, name='conditions'),
 
+    url(r'^delete/con/(?P<part_id>[0-9]+)/$', deleteconditions, name='delete_con_view'),
+
     # treaments/
     
     url(r'^treatments/$', treatments, name='treatments'),
@@ -45,6 +47,6 @@ urlpatterns = [
     url(r'^posts/$', posts, name='posts'),
     
     
-    url(r'^delete/(?P<part_id>[0-9]+)/$', deletepost, name='delete_view'),
-    url(r'^update/(?P<part_id>[0-9]+)/$', updatepost, name='update_view'),
+    url(r'^delete/pos/(?P<part_id>[0-9]+)/$', deletepost, name='delete_pos_view'),
+    url(r'^update/pos/(?P<part_id>[0-9]+)/$', updatepost, name='update_pos_view'),
 ]
