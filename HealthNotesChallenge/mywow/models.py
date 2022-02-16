@@ -9,6 +9,7 @@ from django.db import models
 
 # Allows Practitioners to Sign In
 class Practitioner(models.Model):
+    practitioner_id = models.AutoField(primary_key=True)#, default=1)
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
     occupation = models.CharField(max_length=255)
@@ -18,10 +19,12 @@ class Practitioner(models.Model):
 
 # Allows a Condition to be associated with a Practitoner, Single to Many, and to Treatments
 class Conditions(models.Model):
+    conditions_id = models.AutoField(primary_key=True)#, default=1)
     name_condition = models.CharField(max_length=255)
 
 # Allows a Treatment to be associated with Conditions and Practitioners       
 class Treatments(models.Model):
+    treatments_id = models.AutoField(primary_key=True)#, default=1)
     medical = models.CharField(max_length=255)
     surgical = models.CharField(max_length=255)
     radiation = models.CharField(max_length=255)
