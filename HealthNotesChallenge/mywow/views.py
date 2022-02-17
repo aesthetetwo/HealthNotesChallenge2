@@ -93,6 +93,14 @@ def treatments(request):
     context["dataset"] = Treatments.objects.all()
     return render(request, "treatmentstemplate.html", context)
 
+# Function allowing deletions Treatments to enable full CRUD    
+def deletetreatments(request, part_id = None):
+    context = {}
+    object = Treatments.objects.get( treatments_id=part_id )
+    object.delete()
+    return redirect('treatments') 
+    #return render(request, "treatmentstemplate.html", context)
+
 # Function Allowing Posts
 def posts(request):
     # return HttpResponse("treatments")

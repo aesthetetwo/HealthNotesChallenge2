@@ -8,12 +8,13 @@
 
 </head>
 
-<body style="background-color: blue;">
+<body style="background-color: rgb(11, 159, 245);">
 
 <h1>Treatments</h1>
 
 <div class="main">
     {% for data in dataset %}.
+    {{ data.treatments_id }}<br/>
     {{ data.medical }}<br/>
     {{ data.surgical }}<br/>
     {{ data.radiation }}<br/>
@@ -22,6 +23,8 @@
     {{ data.palliative }}<br/>
     {{ data.clinical_trials }}<br/>
     <hr/>
+    
+    <a href="{% url 'delete_tre_view' part_id=data.treatments_id %}"><i class="Delete"><p>Delete</p></i></a>    
     {% endfor %}
 </div>
 
