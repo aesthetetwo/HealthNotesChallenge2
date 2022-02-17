@@ -76,9 +76,9 @@ def conditions(request):
     return render(request, "conditionstemplate.html", context)
 
 # Function allowing deletions Conditions to enable full CRUD    
-def deleteconditions(request,part_id =None):
+def deleteconditions(request, part_id = None):
     context = {}
-    object = Conditions.objects.get(conditions_id=part_id)
+    object = Conditions.objects.get( conditions_id=part_id )
     object.delete()
     return redirect('conditions') 
     #return render(request, "conditionstemplate.html", context)
