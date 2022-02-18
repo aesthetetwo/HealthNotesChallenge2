@@ -55,7 +55,7 @@ def postportal(request):
         template = loader.get_template('postportaltemplate.html')
         return HttpResponse(template.render(context, request))
 
-# Function for Practitioner Page
+# Function for Practitioners page (aka page1)
 def page1(request):
     # return HttpResponse("page1")
     # dictionary for initial data with
@@ -64,6 +64,14 @@ def page1(request):
     # add the dictionary during initialization
     context["dataset"] = Practitioner.objects.all()
     return render(request, "page1template.html", context)
+
+# Function allowing deletions to Practitioners page to enable full CRUD    
+def deletepractitioner(request, part_id = None):
+    context = {}
+    object = Practitioner.objects.get( practitioner_id=part_id )
+    object.delete()
+    return redirect('page1') 
+    #return render(request, "page1template.html", context)    
 
 # Function for Conditions Page
 def conditions(request):

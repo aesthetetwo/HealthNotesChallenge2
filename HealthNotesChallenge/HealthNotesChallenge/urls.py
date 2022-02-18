@@ -32,7 +32,9 @@ urlpatterns = [
     
     # practitioners/
     url(r'^page1/$', page1, name='page1'),
-    
+
+    url(r'^delete/pra/(?P<part_id>[0-9]+)/$', deletepractitioner, name='delete_pra_view'),
+
     # conditions/
   
     url(r'^conditions/$', conditions, name='conditions'),
