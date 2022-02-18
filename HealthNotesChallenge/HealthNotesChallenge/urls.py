@@ -43,6 +43,8 @@ urlpatterns = [
     
     url(r'^treatments/$', treatments, name='treatments'),
 
+    url(r'^delete/tre/(?P<part_id>[0-9]+)/$', deletetreatments, name='delete_tre_view'),
+
     # posts/
     url(r'^posts/$', posts, name='posts'),
     
