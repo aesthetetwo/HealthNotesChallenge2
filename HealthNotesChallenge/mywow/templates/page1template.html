@@ -10,10 +10,11 @@
 
 <body style="background-color: rgba(255, 255, 0, 0.877);">
 
-<h1>Practitioners</h1>
+<h1>Practitioner</h1>
 
 <div class="main">
     {% for data in dataset %}.
+    {{ data.practitioner_id }}<br/>
     {{ data.first_name }}<br/>
     {{ data.last_name }}<br/>
     {{ data.occupation }}<br/>
@@ -21,6 +22,8 @@
     {{ data.email }}<br/>
     {{ data.phone }}<br/>
     <hr/>
+    
+    <a href="{% url 'delete_pra_view' part_id=data.practitioner_id %}"><i class="Delete"><p>Delete</p></i></a>
     {% endfor %}
 </div>
 
