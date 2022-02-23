@@ -12,6 +12,7 @@ from .models import *
 #
 # Create your views here.
 
+
 # Function with Logic for Home Page
 def mywow(request):
     if request.method == 'GET' or request.method == 'POST':
@@ -24,6 +25,7 @@ def mywow(request):
         template = loader.get_template('mywow.html')
         context = {'SignIn': form}
         return HttpResponse(template.render(context, request))
+
 
 # Function with Logic for Portal Page
 def portal(request):
@@ -48,12 +50,14 @@ def portal(request):
         context = {'Conditions': conditionsform, 'Treatments': treatmentsform, 'Post': makepostform}
         return HttpResponse(template.render(context, request))
 
+
 # Function for After Portal Page
 def postportal(request):
     if request.method == 'GET':
         context = {}
         template = loader.get_template('postportaltemplate.html')
         return HttpResponse(template.render(context, request))
+
 
 # Function for Practitioners page (aka page1)
 def page1(request):
@@ -65,6 +69,7 @@ def page1(request):
     context["dataset"] = Practitioner.objects.all()
     return render(request, "page1template.html", context)
 
+
 # Function allowing deletions to Practitioners page to enable full CRUD    
 def deletepractitioner(request, part_id = None):
     context = {}
@@ -72,6 +77,7 @@ def deletepractitioner(request, part_id = None):
     object.delete()
     return redirect('page1') 
     #return render(request, "page1template.html", context)    
+
 
 # Function for Conditions Page
 def conditions(request):
@@ -83,6 +89,7 @@ def conditions(request):
     context["dataset"] = Conditions.objects.all()
     return render(request, "conditionstemplate.html", context)
 
+
 # Function allowing deletions Conditions to enable full CRUD    
 def deleteconditions(request, part_id = None):
     context = {}
@@ -90,6 +97,7 @@ def deleteconditions(request, part_id = None):
     object.delete()
     return redirect('conditions') 
     #return render(request, "conditionstemplate.html", context)
+
 
 # Function for Treatments Page
 def treatments(request):
@@ -101,6 +109,7 @@ def treatments(request):
     context["dataset"] = Treatments.objects.all()
     return render(request, "treatmentstemplate.html", context)
 
+
 # Function allowing deletions Treatments to enable full CRUD    
 def deletetreatments(request, part_id = None):
     context = {}
@@ -108,6 +117,7 @@ def deletetreatments(request, part_id = None):
     object.delete()
     return redirect('treatments') 
     #return render(request, "treatmentstemplate.html", context)
+
 
 # Function Allowing Posts
 def posts(request):
@@ -119,6 +129,7 @@ def posts(request):
     context["dataset"] = Posts.objects.all()
     return render(request, "poststemplate.html", context)
 
+
 # Function Allowing Deletions Posts to enable full CRUD    
 def deletepost(request,part_id =None):
     context = {}
@@ -126,6 +137,7 @@ def deletepost(request,part_id =None):
     object.delete()
     return redirect('posts') 
     #return render(request, "poststemplate.html", context)
+
 
 # Function with Logic Allowing Update of Posts to enable full CRUD  
 def updatepost(request,part_id =None):
@@ -152,7 +164,5 @@ def updatepost(request,part_id =None):
         template = loader.get_template('changeposttemplate.html')
         context = {'Post': form}
         return HttpResponse(template.render(context, request))
-
-
 
 
